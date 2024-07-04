@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Include your CSS here */
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Chat History</h2>
+        <button class="new-chat-button" onclick="generateNewPrompt()">New Chat</button>
+        <div id="history-box">
+            <!-- Chat history items will be appended here -->
+        </div>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chatbot</h1>
+        </div>
+        <div class="chat-messages" id="chat-box" data-prompt="">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button type="button" class="icon-button" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <script src="static\index.js"></script>
+</body>
+</html>
